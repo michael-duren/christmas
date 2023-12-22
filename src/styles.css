@@ -1,15 +1,78 @@
+/* red: #DF2E38 green: #5D9C59 back: #DDF7E3 */
+
 :root {
 	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
 	font-family: var(--font-body);
 	color: var(--color-text);
+	--festive: 'Festive', cursive;
+
+	--main-red: #df2e38;
+	--main-green: #5d9c59;
+	--background: #ddf7e3;
+
+	--red-50: #fef2f3;
+	--red-100: #fee2e4;
+	--red-200: #fecacd;
+	--red-300: #fda4a9;
+	--red-400: #f97078;
+	--red-500: #f0434d;
+	--red-600: #df2e38;
+	--red-700: #ba1b24;
+	--red-800: #9a1a21;
+	--red-900: #801c22;
+	--red-950: #450a0d;
+
+	--green-50: #f4f9f4;
+	--green-100: #e7f2e6;
+	--green-200: #cee5cd;
+	--green-300: #a9cfa6;
+	--green-400: #7bb177;
+	--green-500: #5d9c59;
+	--green-600: #457841;
+	--green-700: #395f36;
+	--green-800: #2f4d2e;
+	--green-900: #284027;
+	--green-950: #122112;
+
+	--hint-of-green-50: #f2fbf4;
+	--hint-of-green-100: #ddf7e3;
+	--hint-of-green-200: #c3efcd;
+	--hint-of-green-300: #94e1a7;
+	--hint-of-green-400: #5eca79;
+	--hint-of-green-500: #38af57;
+	--hint-of-green-600: #299043;
+	--hint-of-green-700: #237238;
+	--hint-of-green-800: #205b30;
+	--hint-of-green-900: #1c4b2a;
+	--hint-of-green-950: #0a2913;
+
+	--stone-50: #fafaf9;
+	--stone-100: #f5f5f4;
+	--stone-200: #e7e5e4;
+	--stone-300: #d6d3d1;
+	--stone-400: #a8a29e;
+	--stone-500: #78716c;
+	--stone-600: #57534e;
+	--stone-700: #44403c;
+	--stone-800: #292524;
+	--stone-900: #1c1917;
+	--stone-950: #0c0a09;
 }
 
 body {
 	min-height: 100vh;
 	margin: 0;
 	background-size: 100vw 100vh;
+	background: var(--background);
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		364deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(221, 247, 227, 1) 7%,
+		rgba(255, 255, 255, 1) 100%
+	);
 }
 
 h1,
@@ -86,4 +149,28 @@ button:focus:not(:focus-visible) {
 	position: absolute;
 	width: 1px;
 	white-space: nowrap;
+}
+
+/* utils */
+.shadow-lg {
+	box-shadow:
+		0 10px 15px -3px rgb(0 0 0 / 0.2),
+		0 4px 6px -4px rgb(0 0 0 / 0.2);
+}
+.shadow-xl {
+	box-shadow:
+		0 20px 25px -5px rgb(0 0 0 / 0.2),
+		0 8px 10px -6px rgb(0 0 0 / 0.2);
+}
+
+.rounded-lg {
+	border-radius: 0.5rem; /* 8px */
+}
+
+.rounded-xl {
+	border-radius: 0.75rem; /* 12px */
+}
+
+.rounded-2xl {
+	border-radius: 1rem; /* 16px */
 }
