@@ -59,6 +59,18 @@
 	--stone-800: #292524;
 	--stone-900: #1c1917;
 	--stone-950: #0c0a09;
+
+	--yellow-50: #fefbe8;
+	--yellow-100: #fff8c2;
+	--yellow-200: #ffee87;
+	--yellow-300: #ffdd43;
+	--yellow-400: #ffcd2a;
+	--yellow-500: #efae03;
+	--yellow-600: #ce8500;
+	--yellow-700: #a45e04;
+	--yellow-800: #88490b;
+	--yellow-900: #733c10;
+	--yellow-950: #431e05;
 }
 
 body {
