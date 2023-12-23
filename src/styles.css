@@ -82,7 +82,7 @@ body {
 	background: linear-gradient(
 		364deg,
 		rgba(255, 255, 255, 1) 0%,
-		rgba(221, 247, 227, 1) 7%,
+		var(--green-200) 7%,
 		rgba(255, 255, 255, 1) 100%
 	);
 }
