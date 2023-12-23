@@ -6,13 +6,8 @@
 <div class="container">
 	<div class="form rounded-xl shadow-xl">
 		<div class="name">
-			<label for="name">Enter your first name</label>
-			<input
-				type="text"
-				class="shadow-lg rounded-lg"
-				name="name"
-				placeholder="Enter your first name"
-			/>
+			<label for="name">Enter your full name</label>
+			<input type="text" class="shadow-lg rounded-lg" name="name" placeholder="John Doe" />
 		</div>
 		<button class="rounded-lg shadow-lg">Start</button>
 	</div>
