@@ -52,6 +52,6 @@
 		color: var(--yellow-500);
 	}
 	span {
-		transition: color 0.5s ease-in-out;
+		transition: color 1s ease-in-out;
 	}
 </style>
