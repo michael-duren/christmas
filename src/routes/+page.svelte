@@ -1,15 +1,41 @@
+<script lang="ts">
+	import type { User } from '$lib/types/User';
+
+	let user: User = {
+		firstName: '',
+		lastName: ''
+	};
+</script>
+
 <svelte:head>
-	<title>Start</title>
+	<title>Happy Holidays</title>
 	<meta name="start" content="answer the question" />
 </svelte:head>
 
 <div class="container">
 	<div class="form rounded-xl shadow-xl">
+		<div class="form-title">Enter your full name</div>
 		<div class="name">
-			<label for="name">Enter your full name</label>
-			<input type="text" class="shadow-lg rounded-lg" name="name" placeholder="John Doe" />
+			<label for="first">First Name</label>
+			<input
+				type="text"
+				bind:value={user.firstName}
+				class="shadow-lg rounded-lg"
+				name="first"
+				placeholder="John"
+			/>
 		</div>
-		<button class="rounded-lg shadow-lg">Start</button>
+		<div class="name">
+			<label for="last">Last Name</label>
+			<input
+				bind:value={user.lastName}
+				type="text"
+				class="shadow-lg rounded-lg"
+				name="last"
+				placeholder="Doe"
+			/>
+		</div>
+		<button disabled={!user.firstName || !user.lastName} class="rounded-lg shadow-lg">Open</button>
 	</div>
 	<div class="img-container">
 		<img src="icons/Cat.png" alt="Christmas Tree" />
@@ -43,9 +69,13 @@
 	.name {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
 	}
 	label {
+		font-weight: bold;
+		font-size: 1rem;
+		padding-bottom: 0.5rem;
+	}
+	.form-title {
 		font-size: 2.5rem;
 		font-family: var(--festive);
 		color: #fff;
@@ -53,7 +83,7 @@
 	input {
 		font-size: 1.5rem;
 		border: none;
-		padding: 2rem 1rem;
+		padding: 1rem 1rem;
 	}
 	.img-container {
 		height: 100%;
@@ -71,8 +101,17 @@
 		cursor: pointer;
 		background: var(--red-500);
 		color: var(--stone-50);
+		transition: color scale 0.3s ease-in-out;
 	}
 	button:hover {
 		background: var(--red-600);
+	}
+	button:disabled {
+		background: var(--stone-50);
+		color: var(--red-500);
+		cursor: not-allowed;
+	}
+	button:active {
+		transform: scale(1.05);
 	}
 </style>
