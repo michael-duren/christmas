@@ -1,9 +1,15 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import type { User } from '$lib/types/User';
 
 	let user: User = {
 		firstName: '',
 		lastName: ''
+	};
+
+	const handleOpenCard = () => {
+		if (!user.firstName || !user.lastName) return;
+		goto(`/card/${user.firstName}-${user.lastName}`);
 	};
 </script>
 
@@ -35,7 +41,11 @@
 				placeholder="Doe"
 			/>
 		</div>
-		<button disabled={!user.firstName || !user.lastName} class="rounded-lg shadow-lg">Open</button>
+		<button
+			on:click={handleOpenCard}
+			disabled={!user.firstName || !user.lastName}
+			class="rounded-lg shadow-lg">Open</button
+		>
 	</div>
 	<div class="img-container">
 		<img src="icons/Cat.png" alt="Christmas Tree" />

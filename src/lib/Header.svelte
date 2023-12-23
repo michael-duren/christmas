@@ -9,7 +9,7 @@
 	onMount(() => {
 		const interval = setInterval(() => {
 			changeColors();
-		}, 2000);
+		}, 500);
 
 		onDestroy(() => {
 			clearInterval(interval);
@@ -17,7 +17,6 @@
 	});
 
 	function changeColors() {
-		console.log('changeColors');
 		colorsArray = charsArray.map((c) => {
 			return { char: c, color: getRandomColor() };
 		});
@@ -30,11 +29,13 @@
 </script>
 
 <header>
-	{#each colorsArray as { char, color }}
-		<h1>
-			<span style={`color: var(${color})`}>{char}</span>
-		</h1>
-	{/each}
+	<h1>
+		<a href="/">
+			{#each colorsArray as { char, color }}
+				<span style={`color: var(${color})`}>{char}</span>
+			{/each}
+		</a>
+	</h1>
 </header>
 
 <style>
@@ -49,7 +50,10 @@
 		font-size: 7rem;
 		margin: 0;
 		padding: 0;
-		color: var(--yellow-500);
+	}
+	a {
+		text-decoration: none;
+		color: var(--hint-of-green-500);
 	}
 	span {
 		transition: color 1s ease-in-out;
