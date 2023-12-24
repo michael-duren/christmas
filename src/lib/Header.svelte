@@ -47,13 +47,23 @@
 	}
 	h1 {
 		font-family: var(--festive);
-		font-size: 7rem;
+		font-size: 4rem;
 		margin: 0;
 		padding: 0;
 		animation: fadeRight 0.7s ease-in-out;
 		animation-fill-mode: forwards;
 		animation-delay: 0.3s;
 		opacity: 0;
+	}
+	@media (min-width: 768px) {
+		h1 {
+			font-size: 5rem;
+		}
+	}
+	@media (min-width: 1024px) {
+		h1 {
+			font-size: 7rem;
+		}
 	}
 	a {
 		text-decoration: none;

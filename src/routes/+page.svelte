@@ -47,7 +47,10 @@
 			class="rounded-lg shadow-lg">Open</button
 		>
 	</div>
-	<div class="img-container">
+	<div class="img-container img-small">
+		<img src="icons/Toys.png" alt="Christmas Tree" />
+	</div>
+	<div class="img-container img-large">
 		<img src="icons/Cat.png" alt="Christmas Tree" />
 	</div>
 </div>
@@ -58,6 +61,42 @@
 		flex: 1;
 		padding: 2rem;
 		align-items: center;
+		flex-direction: column;
+	}
+	.img-small {
+		display: block;
+	}
+	.img-large {
+		display: none;
+	}
+	.form {
+		order: 1;
+	}
+	@media (min-width: 768px) {
+		.container {
+			flex-direction: row;
+		}
+		.img-small {
+			display: none;
+		}
+		.img-large {
+			display: block;
+		}
+		.form {
+			order: 0;
+		}
+		.form-title {
+			font-size: 2.5rem;
+		}
+		input {
+			font-size: 1.5rem;
+			padding: 1rem 1rem;
+		}
+		button {
+			font-size: 1.5rem;
+			padding: 1.3rem 1rem;
+			margin-top: 0;
+		}
 	}
 	.form {
 		display: flex;
@@ -89,14 +128,14 @@
 		padding-bottom: 0.5rem;
 	}
 	.form-title {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		font-family: var(--festive);
 		color: #fff;
 	}
 	input {
-		font-size: 1.5rem;
+		font-size: 1rem;
 		border: none;
-		padding: 1rem 1rem;
+		padding: 0.8rem;
 	}
 	.img-container {
 		opacity: 0;
@@ -111,10 +150,11 @@
 		height: 100%;
 	}
 	button {
-		padding: 1.3rem 1rem;
+		margin-top: 0.5rem;
+		padding: 1rem 0.7rem;
 		width: 100%;
 		border: none;
-		font-size: 2rem;
+		font-size: 1rem;
 		cursor: pointer;
 		background: var(--red-500);
 		color: var(--stone-50);

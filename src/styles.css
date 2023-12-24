@@ -1,4 +1,11 @@
 /* red: #DF2E38 green: #5D9C59 back: #DDF7E3 */
+/*
+* 'sm' 640 px => media (min-width: 640px)
+* 'md' 768 px
+* 'lg' 1024 px
+* 'xl' 1280 px
+* '2xl' 1536 px
+*/
 
 :root {
 	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
