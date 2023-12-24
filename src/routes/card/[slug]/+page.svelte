@@ -34,7 +34,7 @@
 		</div>
 		<div class="right-side shadow-xl">
 			<div class="right-container">
-				<img src={data.card.image} alt={data.card.title} />
+				<img src={data.card.image} class="shadow-xl" alt={data.card.title} />
 			</div>
 		</div>
 	</div>
@@ -115,7 +115,7 @@
 		background: linear-gradient(120deg, var(--red-200) 0%, var(--red-500) 27%, var(--red-800) 100%);
 	}
 	.right-container {
-		padding: 4rem;
+		padding: 2rem;
 	}
 	@media (min-width: 768px) {
 		.card {
@@ -134,11 +134,13 @@
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 		}
+		.right-container {
+			padding: 4rem;
+		}
 	}
 	img {
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
-		border-radius: 1rem;
 	}
 </style>
