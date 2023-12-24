@@ -26,9 +26,13 @@
 		<div class="left-side shadow-xl">
 			<h1>{data.card.title}</h1>
 			<div class="left-image-container">
-				<img class="left-image" src="/icons/House.png" alt="House" />
+				{#if data.card.secondImage}
+					<img class="left-image" src={data.card.secondImage} alt="House" />
+				{:else}
+					<img class="left-image" src="/icons/House.png" alt="House" />
+				{/if}
 			</div>
-			<p>{data.card.content}</p>
+			<p class="p-content">{data.card.content}</p>
 			<p class="p-cursive">{data.card.signature}</p>
 			<p class="p-cursive">-Michael</p>
 		</div>
@@ -47,9 +51,13 @@
 		margin: 0;
 		padding: 0;
 	}
+	.p-content {
+		padding: 0 0.75rem;
+	}
 	.p-cursive {
 		font-family: var(--festive);
 		font-size: 1.5rem;
+		padding: 0 0.5rem;
 	}
 	.card-front {
 		display: flex;

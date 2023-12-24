@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
 
-	let charsArray: string[] = 'Merry Christmas'.split('');
+	let charsArray: string[] = 'Happy Holidays'.split('');
 	let colorsArray: { char: string; color: string }[] = charsArray.map((c) => {
 		return { char: c, color: getRandomColor() };
 	});

@@ -3,6 +3,7 @@ export type Card = {
 	content: string;
 	signature: string;
 	image: string;
+	secondImage?: string;
 	firstName: string;
 	lastName: string;
 };
