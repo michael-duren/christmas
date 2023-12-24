@@ -50,6 +50,10 @@
 		font-size: 7rem;
 		margin: 0;
 		padding: 0;
+		animation: fadeRight 0.7s ease-in-out;
+		animation-fill-mode: forwards;
+		animation-delay: 0.3s;
+		opacity: 0;
 	}
 	a {
 		text-decoration: none;

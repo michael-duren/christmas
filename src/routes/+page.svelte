@@ -75,6 +75,9 @@
 			var(--red-600) 10px,
 			var(--red-600) 20px
 		);
+		animation: fadeUp 0.5s ease-in-out;
+		animation-fill-mode: forwards;
+		opacity: 0;
 	}
 	.name {
 		display: flex;
@@ -96,7 +99,11 @@
 		padding: 1rem 1rem;
 	}
 	.img-container {
+		opacity: 0;
 		height: 100%;
+		animation: fadeLeft 0.7s ease-out;
+		animation-delay: 0.3s;
+		animation-fill-mode: forwards;
 	}
 	img {
 		object-fit: contain;

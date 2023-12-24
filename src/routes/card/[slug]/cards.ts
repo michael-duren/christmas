@@ -24,5 +24,13 @@ export const cards: Card[] = [
 		content: 'Oh jeez.',
 		image: '/images/dan.jpg',
 		signature: 'Love, '
+	},
+	{
+		firstName: 'jane',
+		lastName: 'bassuk',
+		title: 'Dear Jane',
+		content: 'Oh jeez.',
+		image: '/images/jane.jpg',
+		signature: 'Love, '
 	}
 ];
